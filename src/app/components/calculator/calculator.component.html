@@ -1,0 +1,40 @@
+
+    <div class="container">
+      <div class="calculator">
+   
+       <div class="result">
+        {{ result }} {{ this.CaculatorService.currentOperator }}
+        {{
+          this.CaculatorService.currentInput != 0
+            ? this.CaculatorService.currentInput
+            : ""
+        }}
+        <table>
+          <tr>
+            <td><button  value="1" (click)="pressNumber('1')">1</button></td>
+            <td><button  value="2" (click)="pressNumber('2')">2</button></td>
+            <td><button  value="3" (click)="pressNumber('3')">3</button></td>
+            <td><button  value="+"(click)="pressNumber('+')">+</button></td>
+            
+          </tr>
+          <tr>
+            <td><button  value="4"(click)="pressNumber('4')">4</button></td>
+            <td><button  value="5"(click)="pressNumber('5')">5</button></td>
+            <td><button  value="6"(click)="pressNumber('6')">6</button></td>
+            <td><button  value="X"(click)="pressNumber('X')">X</button></td>
+          </tr>
+          <tr>
+            <td><button  value="7"(click)="pressNumber('7')">7</button></td>
+            <td><button  value="8"(click)="pressNumber('8')">8</button></td>
+            <td><button  value="9"(click)="pressNumber('9')">9</button></td>
+            <td><button  value="-"(click)="pressNumber('-')">-</button></td>
+          </tr>
+          <tr>
+            <td><button  value="0"(click)="pressNumber('0')">0</button></td>
+            <td><button  value="."(click)="pressNumber('.')">.</button></td>
+            <td><button  value="/"(click)="pressNumber('/')">/</button></td>
+            <td><button  value="="(click)="pressNumber('=')">=</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
